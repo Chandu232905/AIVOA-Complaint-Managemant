@@ -1,0 +1,372 @@
+/* =====================================================
+   AIVOA - PROFESSIONAL COMPLAINT MANAGEMENT DASHBOARD
+   ===================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f7fb;
+  color: #1f2937;
+}
+
+
+/* =====================================================
+   APP
+   ===================================================== */
+
+.app {
+  min-height: 100vh;
+}
+
+
+/* =====================================================
+   HEADER
+   ===================================================== */
+
+header {
+  background: #111827;
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 38px;
+  letter-spacing: 2px;
+}
+
+header p {
+  margin: 8px 0 0;
+  font-size: 16px;
+  opacity: 0.85;
+}
+
+
+/* =====================================================
+   MAIN
+   ===================================================== */
+
+main {
+  width: 92%;
+  max-width: 1250px;
+  margin: 30px auto;
+}
+
+
+/* =====================================================
+   DASHBOARD
+   ===================================================== */
+
+.dashboard {
+  margin-bottom: 30px;
+}
+
+.dashboard h2 {
+  margin-bottom: 20px;
+}
+
+
+/* =====================================================
+   STAT CARDS
+   ===================================================== */
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+}
+
+.stat-card {
+  background: white;
+  border-radius: 12px;
+  padding: 22px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e5e7eb;
+}
+
+.stat-card h3 {
+  margin: 0 0 12px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.stat-card strong {
+  font-size: 32px;
+  color: #111827;
+}
+
+
+/* =====================================================
+   GENERAL CARD
+   ===================================================== */
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 28px;
+  margin-bottom: 30px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e5e7eb;
+}
+
+.card h2 {
+  margin-top: 0;
+  margin-bottom: 22px;
+}
+
+
+/* =====================================================
+   FORM
+   ===================================================== */
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 15px;
+  margin-bottom: 7px;
+  font-weight: 600;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: inherit;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.12);
+}
+
+textarea {
+  resize: vertical;
+}
+
+
+/* =====================================================
+   BUTTONS
+   ===================================================== */
+
+button {
+  margin-top: 20px;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+/* =====================================================
+   ERROR
+   ===================================================== */
+
+.error {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  background: #fee2e2;
+  border: 1px solid #fecaca;
+  color: #991b1b;
+}
+
+.error p {
+  margin-bottom: 0;
+}
+
+
+/* =====================================================
+   AI RESULT
+   ===================================================== */
+
+.result {
+  border-left: 5px solid #2563eb;
+}
+
+.result-box {
+  background: #f8fafc;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 14px;
+  border: 1px solid #e5e7eb;
+}
+
+.result-box strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #374151;
+}
+
+.result-box p {
+  margin: 0;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+
+/* =====================================================
+   RISK BADGES
+   ===================================================== */
+
+.risk {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.risk.critical {
+  background: #7f1d1d;
+  color: white;
+}
+
+.risk.high {
+  background: #dc2626;
+  color: white;
+}
+
+.risk.medium {
+  background: #f59e0b;
+  color: white;
+}
+
+.risk.low {
+  background: #16a34a;
+  color: white;
+}
+
+.risk.unknown,
+.risk.needs-ai-assessment {
+  background: #6b7280;
+  color: white;
+}
+
+
+/* =====================================================
+   HISTORY HEADER
+   ===================================================== */
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.history-header h2 {
+  margin: 0;
+}
+
+.history-header button {
+  margin-top: 0;
+}
+
+
+/* =====================================================
+   TABLE
+   ===================================================== */
+
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th {
+  background: #111827;
+  color: white;
+  padding: 14px;
+  text-align: left;
+}
+
+td {
+  padding: 14px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+tr:hover {
+  background: #f9fafb;
+}
+
+td button {
+  margin-top: 0;
+  padding: 8px 14px;
+  font-size: 13px;
+}
+
+
+/* =====================================================
+   MOBILE RESPONSIVE
+   ===================================================== */
+
+@media (max-width: 900px) {
+
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  header h1 {
+    font-size: 30px;
+  }
+
+  main {
+    width: 94%;
+    margin: 20px auto;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .history-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  th,
+  td {
+    padding: 10px;
+    font-size: 13px;
+  }
+
+}
